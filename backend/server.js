@@ -8,9 +8,10 @@ app.use(express.json());
 
 const port = 5000;
 
-//use local connection string
 mongoose
-  .connect("mongodb://localhost:27017/woxro") //connection string goes here
+  .connect(
+    "mongodb+srv://aaromalanil001:Upscarml123@cluster1.akcuv97.mongodb.net/woxro"
+  )
   .then(() => console.log("Db connected"))
   .catch((err) => console.log("error in db", err));
 

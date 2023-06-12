@@ -23,7 +23,8 @@ const Login = () => {
       localStorage.setItem("user", JSON.stringify(res.data));
       message.success("Login successfull");
 
-      navigate("/home");
+      navigate("/");
+      window.location.reload();
     } catch (error) {
       console.log(error.response.data.message);
       message.error(error.response.data.message);
